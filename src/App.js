@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {DndProvider} from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
+import {Provider} from 'react-redux';
+import store from './redux/store';
+import ControlPanelContainer from './components/control_panel_container';
+import BoardContainer from './components/board_container';
+import './css/app.css'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+        <DndProvider backend={HTML5Backend}>
+          <div className="app" align="center" >
+            <div className="header"><h1>HANOI TOWER</h1></div>
+            <ControlPanelContainer className="panel"/>
+            <BoardContainer className="board"/>
+          </div>
+        </DndProvider>
+    </Provider>
   );
 }
+
+
 
 export default App;

@@ -1,0 +1,61 @@
+.app {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.header {
+    padding:10px;
+
+    width:60%;
+    height:100px;
+    margin:20px auto;
+    color: #f8f9fa;
+
+}
+
+.panel {
+    margin:0 auto;
+    padding:10px;
+    background-color: #f8f9fa;
+    width:60%;
+    height:50px;
+    margin:20px auto;
+    display:flex;
+    flex-direction:'row';
+    border-radius: 10px;
+}
+
+.board {
+    margin:0 auto;
+    padding:10px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+
+}
+
+h1 {
+    font-family: Roboto;
+    font-size: 3.5rem;
+}
+
+button {
+    border-radius: 10px;
+    width:30%;
+    height:40px;
+    margin:auto;
+    background-color:#e5453d;
+    color:#f8f9fa;
+    font-size: 30px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+
+
+button:hover{
+    cursor: pointer;
+    background-color:#e5453d;
+    opacity: 1;
+}
+
